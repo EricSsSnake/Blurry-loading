@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.p-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#percentage {
+  z-index: 1;
+  padding: 1em 1.5em;
+  font-size: 4em;
+  color: black;
+  text-shadow: 2px 2px 5px gray;
+  animation: 3.5s fadeaway;
+  animation-fill-mode: forwards;
+}
+
+.container {
+  background: url(images/1.jpg) 100% center;
+  height: 100vh;
+  filter: blur(20px);
+  animation: 4s clear-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes clear-out {
+  from {
+    filter: blur(20px);
+  }
+  to {
+    filter: blur(0);
+  }
+}
+
+@keyframes fadeaway {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
